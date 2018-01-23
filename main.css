@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(170, 170, 170);
+}
+
+
+/* HEADER
+---------------------*/
+
+header .header-show-categories .dropdown-toggle {
+    margin-top: 8px;
+}
+
+.nav-button-dropdown {
+    background-color: #222;
+    color: #9d9d9d !important;
+}
+
+.nav-button-dropdown:hover {
+    color: white;
+}
+
+header nav div div .logo {
+    height: 50px;
+}
+
+header .header-add-delete-box button {
+    margin-right: 13px;
+}
+.navbar-right ~ .navbar-right {
+    margin-right: 10px;
+}
+
+
+/* Cointer
+---------------------*/
