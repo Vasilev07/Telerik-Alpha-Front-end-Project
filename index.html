@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- navigation -->
     <header>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -49,7 +50,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class='header-add-delete-box'>
+                <div class="header-add-delete-box">
                     <button class="btn btn-danger navbar-btn navbar-right">Delete All</button>
                     <button class="btn btn-success navbar-btn navbar-right">Add New</button>
                 </div>
@@ -57,6 +58,175 @@
         </nav>
     </header>
 
+    <!-- interface -->
+    <div class="container-fluid list">
+        <div class="row">
+            <div class="col-xs-1 check left"></div>
+            <div class="col-xs-7 check">
+
+            </div>
+            <div class="col-xs-3 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-1 check"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="bg-info">Background</p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left btn">
+                <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </button>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="text-info">Coloured text and different glyphicon</p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left btn">
+                <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-unchecked"></span>
+                </button>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p>Unchecked button with glyphicon</p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left btn">
+                <button type="button" class="btn btn-success btn-sm">
+                    <span class="glyphicon glyphicon-check"></span>
+                </button>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p>Changes to check when clicked and enables button group at the right</p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left btn">
+                <button type="button" class="btn btn-success btn-sm">
+                    <span class="glyphicon glyphicon-check"></span>
+                </button>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse1">Panel Body and Footer hidden when collapsed </a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">Panel Body</div>
+                            <div class="panel-footer">Panel Footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left btn">
+                <button type="button" class="btn btn-success btn-sm">
+                    <span class="glyphicon glyphicon-check"></span>
+                </button>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse2">Collapsible panel</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">Additional info</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>

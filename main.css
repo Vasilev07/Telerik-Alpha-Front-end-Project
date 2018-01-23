@@ -26,10 +26,42 @@ header nav div div .logo {
 header .header-add-delete-box button {
     margin-right: 13px;
 }
-.navbar-right ~ .navbar-right {
+
+.navbar-right~.navbar-right {
     margin-right: 10px;
 }
 
 
 /* Cointer
 ---------------------*/
+
+
+/* Container
+---------------------*/
+
+
+/* interface */
+
+.list {
+    margin: 5%;
+}
+
+.check {
+    background-color: #f2d8ac;
+    border-bottom: 1px solid rgb(245, 169, 169);
+    height: 40px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.left {
+    border-right: 1px solid rgb(245, 169, 169);
+}
+
+.date {
+    background-color: #f2d8ac;
+    border-bottom: 1px solid rgb(245, 169, 169);
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
