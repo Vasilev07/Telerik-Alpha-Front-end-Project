@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- navigation -->
     <header>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -52,11 +53,201 @@
                 <div class='header-add-delete-box'>
                     <button class="btn btn-danger navbar-btn navbar-right">Delete All</button>
                     <!-- to change Delete all button text -->
-                    <button class="btn btn-success navbar-btn navbar-right">Add New</button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success navbar-btn navbar-right" data-toggle="modal" data-target="#exampleModal">
+                        Add new
+                    </button>
                 </div>
             </div>
         </nav>
+        <!-- Modal Section - Bootstrap--> 
+        <div class=".navbar-right modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Please Add new task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="comment">New task:</label>
+                        <textarea class="form-control" rows="3" id="comment"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </header>
+
+    <!-- interface -->
+    <div class="container-fluid list">
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check">This is a task</p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1 check left">
+
+            </div>
+            <div class="col-xs-5 check">
+                <p class="check"></p>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+    </div>
 
 </body>
 
