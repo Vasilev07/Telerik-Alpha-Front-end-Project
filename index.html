@@ -10,7 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
 </head>
 
 <body>
@@ -61,27 +60,28 @@
                 </div>
             </div>
         </nav>
-        <!-- Modal Section - Bootstrap--> 
-        <div class=".navbar-right modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel"><strong>Please Add new task!</strong></h5>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="comment">New task:</label>
-                        <textarea class="form-control" rows="3" id="comment"></textarea>
+        <!-- Modal Section - Bootstrap-->
+        <div class=".navbar-right modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">
+                            <strong>Please Add new task!</strong>
+                            </h5>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="save-changes">Save changes</button>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="comment">New task:</label>
+                            <textarea class="form-control" rows="2" id="new-task-value"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-new-task">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </header>
 
     <!-- interface -->
@@ -104,7 +104,7 @@
                 </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">
-                <p class="bg-info">Background</p>
+                <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date">
                 <p>01/01/2019</p>
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">
-                <p class="text-info">Coloured text and different glyphicon</p>
+                <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date">
                 <p>01/01/2019</p>
@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">
-                <p>Unchecked button with glyphicon</p>
+                <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date">
                 <p>01/01/2019</p>
@@ -170,16 +170,16 @@
                 </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">
-                <p>Changes to check when clicked and enables button group at the right</p>
+                <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date">
                 <p>01/01/2019</p>
             </div>
             <div class="col-xs-4 col-sm-1 date btn-group">
-                <button type="button" class="btn btn-warning btn-sm">
+                <button type="button" class="btn btn-warning disabled btn-sm">
                     <span class="glyphicon glyphicon-edit"></span>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm">
+                <button type="button" class="btn btn-danger disabled btn-sm">
                     <span class="glyphicon glyphicon-remove"></span>
                 </button>
             </div>
@@ -192,28 +192,16 @@
                 </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" href="#collapse1">Panel Body and Footer hidden when collapsed </a>
-                            </h4>
-                        </div>
-                        <div id="collapse1" class="panel-collapse collapse">
-                            <div class="panel-body">Panel Body</div>
-                            <div class="panel-footer">Panel Footer</div>
-                        </div>
-                    </div>
-                </div>
+                <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date">
                 <p>01/01/2019</p>
             </div>
             <div class="col-xs-4 col-sm-1 date btn-group">
-                <button type="button" class="btn btn-warning btn-sm">
+                <button type="button" class="btn btn-warning disabled btn-sm">
                     <span class="glyphicon glyphicon-edit"></span>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm">
+                <button type="button" class="btn btn-danger disabled btn-sm">
                     <span class="glyphicon glyphicon-remove"></span>
                 </button>
             </div>
@@ -226,33 +214,170 @@
                 </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" href="#collapse2">Collapsible panel</a>
-                            </h4>
-                        </div>
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body">Additional info</div>
-                        </div>
-                    </div>
-                </div>
+                <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date">
                 <p>01/01/2019</p>
             </div>
             <div class="col-xs-4 col-sm-1 date btn-group">
-                <button type="button" class="btn btn-warning btn-sm">
+                <button type="button" class="btn btn-warning disabled btn-sm">
                     <span class="glyphicon glyphicon-edit"></span>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm">
+                <button type="button" class="btn btn-danger disabled btn-sm">
                     <span class="glyphicon glyphicon-remove"></span>
                 </button>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1 date left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-8 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-8 col-sm-2 date">
+                <p>01/01/2019</p>
+            </div>
+            <div class="col-xs-4 col-sm-1 date btn-group">
+                <button type="button" class="btn btn-warning disabled btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
