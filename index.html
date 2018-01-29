@@ -110,7 +110,8 @@
                 <p>01/01/2019</p>
             </div>
             <div class="col-xs-4 col-sm-1 date btn-group">
-                <button type="button" class="btn btn-warning disabled btn-sm">
+                <!-- working on -->
+                <button type="button" class="btn btn-warning btn-sm edit" data-toggle="modal" data-target="#editModal">
                     <span class="glyphicon glyphicon-edit"></span>
                 </button>
                 <button type="button" class="btn btn-danger disabled btn-sm">
@@ -377,7 +378,30 @@
             </div>
         </div>
     </div>
+    <!-- Modal Section - Edit Task- Id EDIT MODAL-->
+    <div class=".navbar-right modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="editModalLabel">
+                            <strong>Edit Task</strong>
+                            </h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="comment">Edit task:</label>
+                            <textarea class="form-control" rows="2" id="edit-task-value"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-edit-task">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script src="main.js"></script>
+    <script src="./edit.js"></script>
 </body>
 
 </html>
