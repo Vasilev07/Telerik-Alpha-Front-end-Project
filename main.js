@@ -7,13 +7,11 @@ $('#save-new-task').on('click', function () { // save changes
     // take value from the input
     var taskValue = $('#new-task-value').val().toString();
     // push the task value to P item
-    for (var text of $(".create-new-task")) {
-        $(text).addClass('new-task-text-from-value');
-        $(text).removeClass('create-new-task');
-        $(text).text(taskValue);
-        arr.push(taskValue);
-        break
-    }
+    $(".create-new-task").first()
+        .addClass('new-task-text-from-value')
+        .removeClass('create-new-task')
+        .text(taskValue);
+    arr.push(taskValue);
     // delete input field (clear it)
     $('#new-task-value').val('');
 });
