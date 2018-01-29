@@ -32,9 +32,11 @@ header .header-add-delete-box button {
 }
 
 
-/* Cointer
+/* Cointer add button
 ---------------------*/
-
+.remove-padding {
+    padding-left: 0px;
+}
 
 /* Container
 ---------------------*/
@@ -58,7 +60,7 @@ header .header-add-delete-box button {
     border-right: 1px solid rgb(245, 169, 169);
 }
 
-.date {
+.date-style {
     background-color: #f2d8ac;
     border-bottom: 1px solid rgb(245, 169, 169);
     height: 40px;

@@ -12,9 +12,21 @@ $('#save-new-task').on('click', function () { // save changes
         .removeClass('create-new-task')
         .text(taskValue)
         .attr("id", id);
-    id += 1;
+    var idstr = "#" + id;
+
+   //make active edit and delete buttons
+    $(idstr).parent().siblings(".date-style").children("button.edit")
+        .removeClass()
+        .addClass("btn btn-warning btn-sm edit")
+        .attr("data-toggle", "modal");
+
+    $(idstr).parent().siblings(".date-style").children("button.remove")
+        .removeClass()
+        .addClass("btn btn-danger btn-sm remove");
+
     // delete input field (clear it)
-    $('#new-task-value').val('');    
+    $('#new-task-value').val('');
+    id += 1;
 });
 
 // TODO
