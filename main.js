@@ -14,10 +14,17 @@ $('#save-new-task').on('click', function () { // save changes
 
     // delete input field (clear it)
     $('#new-task-value').val('');
-    // get current date and append it to html
-    var currentDate = $('#datetimepicker1').data("DateTimePicker").useCurrent('year', 'month', 'day').date()._i.toString();
-    $(".current-date").first().removeClass('current-date').html(currentDate);
-        
+    // get current date
+    var currentDate = $('#datetimepicker1')
+        .data("DateTimePicker")
+        .date()._d;
+
+    var parsedDate = currentDate.getDate() + '/' +  (currentDate.getMonth() + 1) + '/' + currentDate.getFullYear();
+    // attach element to html
+    $(".current-date")
+        .first()
+        .removeClass('current-date')
+        .html(parsedDate);
 });
 
 // TODO
