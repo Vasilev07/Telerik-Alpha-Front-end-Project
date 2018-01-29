@@ -14,6 +14,7 @@ $('#save-new-task').on('click', function () { // save changes
         arr.push(taskValue);
         break
     }
+    // save the date
     // delete input field (clear it)
     $('#new-task-value').val('');
 });
