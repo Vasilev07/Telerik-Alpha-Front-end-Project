@@ -54,7 +54,7 @@ header .header-add-delete-box button {
     font-size: 24px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
 }
 .check p {
     margin: 0 0 0px;
