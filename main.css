@@ -2,7 +2,6 @@ body {
     background-color: rgb(170, 170, 170);
 }
 
-
 /* HEADER
 ---------------------*/
 
@@ -31,16 +30,15 @@ header .header-add-delete-box button {
     margin-right: 10px;
 }
 
-
 /* Cointer add button
 ---------------------*/
+
 .remove-padding {
     padding-left: 0px;
 }
 
 /* Container
 ---------------------*/
-
 
 /* interface */
 
@@ -53,14 +51,26 @@ header .header-add-delete-box button {
     border-bottom: 1px solid rgb(245, 169, 169);
     height: 40px;
     text-align: left;
-    font-size: 18px;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.check p {
+    margin: 0 0 0px;
 }
 
 .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-right: 1px solid rgb(245, 169, 169);
 }
 
 .date-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #f2d8ac;
     border-bottom: 1px solid rgb(245, 169, 169);
     height: 40px;
