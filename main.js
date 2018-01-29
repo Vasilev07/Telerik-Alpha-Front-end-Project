@@ -17,7 +17,7 @@ $('#save-new-task').on('click', function () { // save changes
     // get current date and append it to html
     var currentDate = $('#datetimepicker1').data("DateTimePicker").useCurrent('year', 'month', 'day').date()._i.toString();
     $(".current-date").first().removeClass('current-date').html(currentDate);
-    
+        
 });
 
 // TODO
