@@ -1,7 +1,6 @@
 
 // Option is to put only $(function(){}). This allows us to put this script befor the body.
-$(document).ready(function () {
-    
+$(function () {    
     $(".edit").on("click", function () {
         var rowId = $(this).parent().siblings(".check").children("p").attr("id");
         rowId = "#" + rowId;

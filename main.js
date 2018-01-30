@@ -1,55 +1,52 @@
-// get values from input filed and push it to array
-// save changes button get value from input field
 var id = 1;
-// attach event to add button on it's click
-$('#save-new-task').on('click', function () { // save changes
-    // take value from the input
-    var taskValue = $('#new-task-value').val().toString();
-    // push the task value to P item
+$(function () {
+    // attach event to add button on it's click    
+    $('#save-new-task').on('click', function () { // save changes
+        var taskValue = $('#new-task-value').val().toString();
+        // take value from the input
+        $(".create-new-task")
+            .first()
+            .removeClass('create-new-task')
+            .addClass('new-task-text-from-value')
+            .text(taskValue)
+            .attr("id", id);
+        $('#new-task-value').val('');
+        // delete input field (clear it) 
 
-    $(".create-new-task").first()
-        .addClass('new-task-text-from-value')
-        .removeClass('create-new-task')
-        .text(taskValue)
-        .attr("id", id);
-    id += 1;
-    // delete input field (clear it)
-    $('#new-task-value').val('');
+        var idstr = "#" + id;
 
-    $(".create-new-task")
-        .first()
-        .addClass('new-task-text-from-value')
-        .removeClass('create-new-task')
-        .text(taskValue);
+        var currentDate = $('#datetimepicker1')
+            .data("DateTimePicker")
+            .date()._d;
+        // get current date
 
-    // delete input field (clear it)
-    $('#new-task-value').val('');
-    // get current date
-    var currentDate = $('#datetimepicker1')
-        .data("DateTimePicker")
-        .date()._d;
+        var parsedDate = currentDate.getDate() + '/' + (currentDate.getMonth() + 1) + '/' + currentDate.getFullYear();
+        
+        $(idstr)
+            .parent()
+            .siblings(".date-style")
+            .children(".current-date")
+            .html(parsedDate);
+            // add parsed string to class date-style.current-date
 
-    var parsedDate = currentDate.getDate() + '/' + (currentDate.getMonth() + 1) + '/' + currentDate.getFullYear();
-    // attach element to html
-    $(".current-date")
-        .first()
-        .removeClass('current-date')
-        .html(parsedDate);
-    var idstr = "#" + id;
+        $(idstr)
+            .parent()
+            .siblings(".date-style")
+            .children("button.edit")
+            .removeClass()
+            .addClass("btn btn-warning btn-sm edit")
+            .attr("data-toggle", "modal");
 
-   //make active edit and delete buttons
-    $(idstr).parent().siblings(".date-style").children("button.edit")
-        .removeClass()
-        .addClass("btn btn-warning btn-sm edit")
-        .attr("data-toggle", "modal");
-
-    $(idstr).parent().siblings(".date-style").children("button.remove")
-        .removeClass()
-        .addClass("btn btn-danger btn-sm remove");
-
-    // delete input field (clear it)
-    $('#new-task-value').val('');
-    id += 1;
+        $(idstr)
+            .parent()
+            .siblings(".date-style")
+            .children("button.remove")
+            .removeClass()
+            .addClass("btn btn-danger btn-sm remove");
+            // make active buttons edit and delete
+            
+        id += 1;
+    });
 });
 
 // TODO
