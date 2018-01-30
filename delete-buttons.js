@@ -1,106 +1,58 @@
 /*eslint-disable*/
 
-// var newRow = $("<div></div>");
-// newRow.addClass("row");
-// newRow.html(`<div class="col-xs-2 col-sm-1 date left">
-//                 <div class="form-check text-center">
-//                     <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-//                 </div>
-//             </div>
-//             <div class="col-xs-10 col-sm-8 check">
-//                 <p class="create-new-task">New Row</p>
-//             </div>
-//             <div class="col-xs-8 col-sm-2 date">
-//                 <p></p>
-//             </div>
-//             <div class="col-xs-4 col-sm-1 date btn-group">
-//                 <button type="button" class="btn btn-warning disabled btn-sm">
-//                     <span class="glyphicon glyphicon-edit"></span>
-//                 </button>
-//                 <button type="button" class="btn btn-danger disabled btn-sm">
-//                     <span class="glyphicon glyphicon-remove"></span>
-//                 </button>
-//             </div>`);
+function addRow(beforeClass) {
+    var newRow = $("<div></div>");
+    newRow.addClass(" row ")
+        .addClass(" empty-row ")
+        .html(`
+    <div class="col-xs-2 col-sm-1 date-style left">
+        <div class="form-check text-center">
+            <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        </div>
+    </div>
+    <div class="col-xs-10 col-sm-8 check">
+        <p class="create-new-task"></p>
+    </div>
+    <div class="col-xs-8 col-sm-2 date-style">
+        <p class="current-date"></p>
+    </div>
+    <div class="col-xs-4 col-sm-1 date-style btn-group">
+        <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+            <span class="glyphicon glyphicon-edit"></span>
+        </button>
+        <button type="button" class="btn btn-danger disabled btn-sm remove">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+    </div>
+    `);
+    return $(beforeClass).before(newRow);
+}
 
-// console.log(newRow);
-// $(".interface").append(newRow);
-// $(".interface").append(newRow);
+$(document).on("click", ".single-delete", function () {
+    $(this).parentsUntil(".interface").remove();
+        addRow(".empty-last");
+})
 
-$('.row').on("change", function (e) {
-    console.log(this);
+$(document).on("click", ".delete-all", function () {
+    var countOfNewRows = $(".selected").length;
+    $(".selected").remove();
+    for (var i = 0; i < countOfNewRows; i += 1) {
+        addRow(".empty-last")
+    }
+})
+
+$(document).on("change", '.row', function (e) {
     var rowToDelete = $(this);
     var inputCheck = $(e.target);
     var deleteButton = $(this).find(".btn-danger");
-    // console.log(deleteButton);
     if ($(inputCheck).is(':checked')) {
-        console.log("CHECKEd");
-        deleteButton.removeClass("disabled");
-        deleteButton.on("click", function () {
-            rowToDelete.remove();
-            var newRow = $("<div></div>");
-            newRow.addClass("row");
-            
-            newRow.html(`<div class="col-xs-2 col-sm-1 date left">
-                <div class="form-check text-center">
-                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                </div>
-            </div>
-            <div class="col-xs-10 col-sm-8 check">
-                <p class="create-new-task">New Row</p>
-            </div>
-            <div class="col-xs-8 col-sm-2 date">
-                <p></p>
-            </div>
-            <div class="col-xs-4 col-sm-1 date btn-group">
-                <button type="button" class="btn btn-warning disabled btn-sm">
-                    <span class="glyphicon glyphicon-edit"></span>
-                </button>
-                <button type="button" class="btn btn-danger disabled btn-sm">
-                    <span class="glyphicon glyphicon-remove"></span>
-                </button>
-            </div>`);
-            $(".interface").append(newRow);
-        })
+        deleteButton.removeClass(" disabled ");
+        deleteButton.addClass(" single-delete ");
+        rowToDelete.addClass(" selected ");
+
     } else {
-        console.log("NOT");
-        deleteButton.addClass("disabled");
+        deleteButton.addClass(" disabled ");
+        deleteButton.removeClass(" single-delete ");
+        rowToDelete.removeClass(" selected ");
     }
-
-
 });
-// $('.checkbox-primary').on("change", function () {
-//     var rowToChange = $(this).parentsUntil(".interface");
-//     if ($(this).is(':checked')) {
-//         console.log($(this));
-//         $(rowToChange.find(".disabled")).removeClass("disabled");
-//         $(rowToChange).on("click", ".btn-danger", function () {
-//             $(rowToChange).remove();
-//             // $(".interface").append(newRow);
-//             var newRow = $("<div></div>");
-//             newRow.addClass("row");
-//             newRow.html(`<div class="col-xs-2 col-sm-1 date left">
-//                 <div class="form-check text-center">
-//                     <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-//                 </div>
-//             </div>
-//             <div class="col-xs-10 col-sm-8 check">
-//                 <p class="create-new-task">New Row</p>
-//             </div>
-//             <div class="col-xs-8 col-sm-2 date">
-//                 <p></p>
-//             </div>
-//             <div class="col-xs-4 col-sm-1 date btn-group">
-//                 <button type="button" class="btn btn-warning disabled btn-sm">
-//                     <span class="glyphicon glyphicon-edit"></span>
-//                 </button>
-//                 <button type="button" class="btn btn-danger disabled btn-sm">
-//                     <span class="glyphicon glyphicon-remove"></span>
-//                 </button>
-//             </div>`);
-//             $(newRow).appendTo(".interface")
-//             // $(rowToChange).val('');
-//         })
-//     } else {
-//         $(rowToChange.find("button")).addClass("disabled");
-//     }
-// });
