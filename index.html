@@ -131,6 +131,21 @@
                 <div class="form-check text-center">
                     <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
                 </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle nav-button-dropdown tag" type="button" data-toggle="dropdown">Tag
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Done</a>
+                        </li>
+                        <li>
+                            <a href="#">Emergency</a>
+                        </li>
+                        <li>
+                            <a href="#">Not so emergency</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-xs-10 col-sm-8 check">               
                 <p class="create-new-task"></p>
@@ -369,7 +384,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancel-edit-task">Close</button>
                     <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-edit-task">Save changes</button>
                 </div>
             </div>

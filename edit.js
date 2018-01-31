@@ -1,13 +1,23 @@
+$(function () {
+    var sharedState = {};
 
-// Option is to put only $(function(){}). This allows us to put this script befor the body.
-$(function () {    
     $(".edit").click(function () {
-        var rowId = $(this).parent().siblings(".check").children("p").attr("id");
+        var rowId = $(this).parent().parent(".row").attr("id");
         rowId = "#" + rowId;
-        $("#save-edit-task").on("click", function () {
-            var taskVal = $("#edit-task-value").val().toString();
-            $(rowId).html(taskVal);
-            $('#new-task-value').val('');
-        });
+        console.log(rowId);
+        sharedState.rowId = rowId;
+
+       
     });
+
+    $("#save-edit-task").click(function () {
+        var taskVal = $("#edit-task-value").val().toString();
+        var element = $(sharedState.rowId).find(".new-task-text-from-value");
+        $(element[0]).text(taskVal);
+        console.log(element[0]);
+    });
+
+    $('#editModal').on('hidden.bs.modal', function () {
+        $('#edit-task-value').val('');
+    })
 });

@@ -9,6 +9,8 @@ $(function () {
             .removeClass('create-new-task')
             .addClass('new-task-text-from-value')
             .text(taskValue)
+            .parent()
+            .parent(".row")
             .attr("id", id);
         $('#new-task-value').val('');
         // delete input field (clear it) 
@@ -30,16 +32,14 @@ $(function () {
         // add parsed string to class date-style.current-date
 
         $(idstr)
-            .parent()
-            .siblings(".date-style")
+            .children(".date-style")
             .children("button.edit")
             .removeClass()
             .addClass("btn btn-warning btn-sm edit")
             .attr("data-toggle", "modal");
 
         $(idstr)
-            .parent()
-            .siblings(".date-style")
+            .children(".date-style")
             .children("button.remove")
             .removeClass()
             .addClass("btn btn-danger btn-sm remove");
