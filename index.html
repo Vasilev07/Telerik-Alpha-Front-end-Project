@@ -59,7 +59,7 @@
                     <button class="btn btn-danger navbar-btn navbar-right">Delete All</button>
                     <!-- to change Delete all button text -->
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success navbar-btn navbar-right" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-success navbar-btn navbar-right add-new" data-toggle="modal" data-target="#exampleModal">
                         Add new
                     </button>
                 </div>
@@ -96,6 +96,7 @@
                                     <script type="text/javascript">
                                         $(function () {
                                             $('#datetimepicker1').datetimepicker();
+                                            // set current date to default
                                         });
                                     </script>
                                 </div>
@@ -103,7 +104,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary closed" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-new-task">Save changes</button>
                     </div>
                 </div>
