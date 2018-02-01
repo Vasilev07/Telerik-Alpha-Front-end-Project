@@ -69,15 +69,15 @@ $(function () {
     // when close btn is pressed remove the text in the input field
 });
 
-$(function () {
-    $('.add-new').on('click', function () {
-        var today = new Date();
-        var day = today.getDate();
-        var month = today.getMonth() + 1; //January is 0!
-        var year = today.getFullYear();
-        today = yearAsString(day, month, year).usedForDefaultDate;
-        // get today date and parse it in proper format
-        // attach the current date to default date in date pickers
-        $('#date-time').val(today);
-    });
-});
+// $(function () {
+//     $('.add-new').on('click', function () {
+//         var today = new Date();
+//         var day = today.getDate();
+//         var month = today.getMonth() + 1; //January is 0!
+//         var year = today.getFullYear();
+//         today = yearAsString(day, month, year).usedForDefaultDate;
+//         // get today date and parse it in proper format
+//         // attach the current date to default date in date pickers
+//         // $('#date-time').val(today);
+//     });
+// });

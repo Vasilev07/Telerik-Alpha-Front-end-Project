@@ -23,16 +23,17 @@ $(function () {
         sharedState.rowId = rowId;
         // sets id in sharedstate object
         $("#edit-task-value").val($(rowId).text());
-        // Add the value for editing in the form field
+        // The function sets value for editing in the form field
 
         var currentDate = $(this).parent().siblings(".date-style").children("p").text();
-        var date = new Date();
-        currentDate = currentDate.split("/");
-        date.setDate = currentDate[0];
-        date.setMonth = currentDate[1];
-        date.setFullYear = currentDate[2];
-        $("#date-time-edit").val(date);
+        currentDate = currentDate.split("/");        
+        var date = moment(new Date(`${currentDate[2]}/${currentDate[1]}/${currentDate[0]}`));
+        $('#datetimepicker1-edit').datetimepicker({
+            defaultDate: date            
+        });
+        // This function sets the default date in the edit form
     });
+
 
     $("#save-edit-task").click(function () {
         var taskVal = $("#edit-task-value").val().toString();
@@ -53,7 +54,7 @@ $(function () {
             .children(".current-date")
             .text(parsedDate);
         // sets the edited date in the field
-        
+
         var rowClass = yearAsString(currentDay, currentMonth, currentYear).usedForSorting + taskVal;
         $(sharedState.rowId).parent().parent().attr("sorting", rowClass);
         // sets the eddited date attribute    

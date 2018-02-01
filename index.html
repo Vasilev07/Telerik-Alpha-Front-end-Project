@@ -96,7 +96,10 @@
                                     </div>
                                     <script type="text/javascript">
                                         $(function () {
-                                            $('#datetimepicker1').datetimepicker();
+                                            var date =  moment(new Date()); 
+                                            $('#datetimepicker1').datetimepicker({
+                                                defaultDate: date
+                                            });
                                             // set current date to default
                                         });
                                     </script>
@@ -389,12 +392,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script type="text/javascript">
+                                <!-- <script type="text/javascript">
                                     $(function () {
-                                        $('#datetimepicker1-edit').datetimepicker();
+                                        var date =  moment(new Date()); 
+                                        $('#datetimepicker1-edit').datetimepicker({
+                                            defaultDate: date
+                                        });
                                         // set current date to default
                                     });
-                                </script>
+                                </script> -->
                             </div>
                         </div>
                     </div>
