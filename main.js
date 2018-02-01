@@ -57,7 +57,7 @@ $(function () {
             .addClass("btn btn-warning btn-sm edit")
             .attr("data-toggle", "modal");
 
-        // make active buttons edit and (delete)
+        // make active buttons edit
         id += 1;
     });
 });
