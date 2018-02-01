@@ -129,11 +129,14 @@
         <!-- enter starts here -->
         <div class="row">
             <div class="col-xs-2 col-sm-1 date-style left">
+                <div class="done"></div>
+                <div class="important"></div>
                 <div class="form-check text-center">
-                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                </div>
+                    <input class="form-check-input position-static checkbox checkbox-success" type="checkbox" id="blankCheckbox" value="option1"
+                        aria-label="...">
+                </div>                
             </div>
-            <div class="col-xs-10 col-sm-8 check">               
+            <div class="col-xs-10 col-sm-8 check">
                 <p class="create-new-task"></p>
             </div>
             <div class="col-xs-8 col-sm-2 date-style">
@@ -370,14 +373,17 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancel-edit-task">Close</button>
                     <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-edit-task">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
     <script src="./edit.js"></script>
+    <script src="./delete-buttons.js"></script>
+    <script src="./set-color.js"></script>
+    <script src="sorting.js"></script>
 </body>
 
 </html>

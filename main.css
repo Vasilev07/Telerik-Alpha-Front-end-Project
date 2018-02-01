@@ -79,7 +79,19 @@ header .header-add-delete-box button {
     font-size: 18px;
 }
 
-.tag {
-    background-color: #aa874a;
+.done {
+    /* position: absolute; */
+    position: inherit;
+    background-color: rgb(18, 190, 90);
+    width: 15px;
+    height: 20px;
+    /* margin: 0px; */
+}
+.important {
+    position: inherit;
+    background-color: rgb(211, 28, 28);
+    width: 15px;
+    height: 20px;
+    margin: 5px;
 }
 

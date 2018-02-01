@@ -1,12 +1,24 @@
+$(function () {
+    var sharedState = {};
 
-// Option is to put only $(function(){}). This allows us to put this script befor the body.
-$(function () {    
-    $(".edit").on("click", function () {
+    $(".edit").click(function () {
         var rowId = $(this).parent().siblings(".check").children("p").attr("id");
+        //takes id of the P in this row
         rowId = "#" + rowId;
-        $("#save-edit-task").on("click", function () {
-            var taskVal = $("#edit-task-value").val().toString();
-            $(rowId).html(taskVal);
-        });
+        sharedState.rowId = rowId;
+        // sets id in sharedstate object
+    });
+
+    $("#save-edit-task").click(function () {
+        var taskVal = $("#edit-task-value").val().toString();
+        // takes value from the form
+        var element = $(sharedState.rowId).text(taskVal);
+        $(element[0]).text(taskVal);
+        // sets the edited text to the P element
+    });
+
+    $('#editModal').on('hidden.bs.modal', function () {
+        // clears the modal form field on esk, cancel and click out of the window.
+        $('#edit-task-value').val('');
     });
 });

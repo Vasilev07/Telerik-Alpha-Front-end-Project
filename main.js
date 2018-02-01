@@ -1,6 +1,6 @@
 var id = 1;
 
-function yearAsString(day, month, year){
+function yearAsString(day, month, year) {
     if (day < 10) {
         day = '0' + day;
     }
@@ -9,7 +9,7 @@ function yearAsString(day, month, year){
     }
 
     return {
-        usedForSorting : year + month + day,
+        usedForSorting: year + month + day,
         usedForDefaultDate: day + '/' + month + '/' + year
     }
 }
@@ -35,7 +35,7 @@ $(function () {
             .date()._d;
         // get current date
         var currentDay = currentDate.getDate();
-        var currentMonth =  (currentDate.getMonth() + 1);
+        var currentMonth = (currentDate.getMonth() + 1);
         var currentYear = currentDate.getFullYear();
         var parsedDate = currentDay + '/' + currentMonth + '/' + currentYear;
         var rowClass = yearAsString(currentDay, currentMonth, currentYear).usedForSorting + taskValue;
@@ -65,7 +65,7 @@ $(function () {
             .addClass("btn btn-danger btn-sm remove");
         // make active buttons edit and delete
         id += 1;
-    }); 
+    });
 });
 
 $(function () {
