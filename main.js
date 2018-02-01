@@ -57,13 +57,7 @@ $(function () {
             .addClass("btn btn-warning btn-sm edit")
             .attr("data-toggle", "modal");
 
-        $(idstr)
-            .parent()
-            .siblings(".date-style")
-            .children("button.remove")
-            .removeClass()
-            .addClass("btn btn-danger btn-sm remove");
-        // make active buttons edit and delete
+        // make active buttons edit and (delete)
         id += 1;
     });
 });
