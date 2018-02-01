@@ -27,11 +27,16 @@ function addRow(beforeClass) {
     `);
     return $(beforeClass).before(newRow);
 }
+// function used to add a row at the bottom of the "page"
 
 $(document).on("click", ".single-delete", function () {
     $(this).parentsUntil(".interface").remove();
         addRow(".empty-last");
+    if ($(".selected").length === 0) {
+        $(".delete-all").addClass(" disabled ")
+    }
 })
+// functionality when deleting a row with single buttons
 
 $(document).on("click", ".delete-all", function () {
     var countOfNewRows = $(".selected").length;
@@ -39,20 +44,29 @@ $(document).on("click", ".delete-all", function () {
     for (var i = 0; i < countOfNewRows; i += 1) {
         addRow(".empty-last")
     }
+    if ($(".selected").length === 0) {
+        $(".delete-all").addClass(" disabled ")
+    }
 })
+// same but deleting with "Delete All" button
 
 $(document).on("change", '.row', function (e) {
     var rowToDelete = $(this);
     var inputCheck = $(e.target);
     var deleteButton = $(this).find(".btn-danger");
     if ($(inputCheck).is(':checked')) {
-        deleteButton.removeClass(" disabled ");
+        deleteButton.removeClass("disabled");
         deleteButton.addClass(" single-delete ");
         rowToDelete.addClass(" selected ");
-
+        $(".delete-all").removeClass("disabled")
     } else {
         deleteButton.addClass(" disabled ");
         deleteButton.removeClass(" single-delete ");
         rowToDelete.removeClass(" selected ");
+        if ($(".selected").length === 0) {
+            $(".delete-all").addClass(" disabled ")
+        }
     }
 });
+// adding and removing classes when checking/unchecking checkboxes
+// classes are used by the functions above and needed by them to work properly
