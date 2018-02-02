@@ -30,6 +30,12 @@ header .header-add-delete-box button {
     margin-right: 10px;
 }
 
+.navbar-fixed-top {
+    opacity: 0.9;
+    background-color: rgb(70, 70, 70);
+}
+/* fixed navbar at the top */
+
 /* Cointer add button
 ---------------------*/
 

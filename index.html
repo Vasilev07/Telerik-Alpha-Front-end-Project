@@ -20,7 +20,7 @@
 <body>
     <!-- navigation -->
     <header>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <img src="./images/GRSS(1).png" alt="GRSS" class="logo" class="img-rounded">
@@ -118,7 +118,7 @@
     <!-- interface -->
     <div class="container-fluid list interface">
         <!-- empty row -->
-        <!-- <div class="row empty-first">
+        <div class="row empty-first">
             <div class="col-xs-1 check left"></div>
             <div class="col-xs-7 check">
 
@@ -127,7 +127,7 @@
                 <p class="check"></p>
             </div>
             <div class="col-xs-1 check"></div>
-        </div> -->
+        </div>
 
         <!-- enter starts here -->
         <div class="row">
@@ -136,13 +136,13 @@
                     <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
                 </div>
             </div>
-            <div class="col-xs-7 col-md-8 check">
+            <div class="col-xs-7 col-md-7 check">
                 <p class="create-new-task"></p>
             </div>
             <div class="col-xs-3 col-md-2 date-style">
                 <p class="current-date"></p>
             </div>
-            <div class="col-xs-12 col-md-1 date-style btn-group buttons-group">
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
                 <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
                     <span class="glyphicon glyphicon-edit"></span>
                 </button>
@@ -160,13 +160,205 @@
                     <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
                 </div>
             </div>
-            <div class="col-xs-7 col-md-8 check">
+            <div class="col-xs-7 col-md-7 check">
                 <p class="create-new-task"></p>
             </div>
             <div class="col-xs-3 col-md-2 date-style">
                 <p class="current-date"></p>
             </div>
-            <div class="col-xs-12 col-md-1 date-style btn-group buttons-group">
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
                 <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
                     <span class="glyphicon glyphicon-edit"></span>
                 </button>
@@ -181,7 +373,7 @@
         
         <!-- list finnished here -->
 
-        <!-- <div class="row empty-last">
+        <div class="row empty-last">
             <div class="col-xs-1 check left"></div>
             <div class="col-xs-7 check">
 
@@ -190,11 +382,11 @@
                 <p class="check"></p>
             </div>
             <div class="col-xs-1 check">
-                <a href="#" id="bottomAddNewButton" class="btn btn-success btn-md" data-toggle="modal" data-target="#exampleModal">
+                <!-- <a href="#" id="bottomAddNewButton" class="btn btn-success btn-md" data-toggle="modal" data-target="#exampleModal">
                     <span class="glyphicon glyphicon-plus"></span>
-                </a>
+                </a> -->
             </div>
-        </div> -->
+        </div>
     </div>
     <!-- Modal Section - Edit Task- Id EDIT MODAL-->
     <div class=".navbar-right modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

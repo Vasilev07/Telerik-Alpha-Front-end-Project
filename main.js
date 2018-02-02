@@ -1,5 +1,37 @@
 var id = 1;
 
+function addRow(beforeClass) {
+    var newRow = $("<div></div>");
+    newRow.addClass(" row ")
+        .addClass(" empty-row ")
+        .html(`
+            <div class="col-xs-2 col-md-1 date-style left">
+                <div class="form-check text-center">
+                    <input class="form-check-input position-static checkbox-primary" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </div>
+            </div>
+            <div class="col-xs-7 col-md-7 check">
+                <p class="create-new-task"></p>
+            </div>
+            <div class="col-xs-3 col-md-2 date-style">
+                <p class="current-date"></p>
+            </div>
+            <div class="col-xs-12 col-md-2 date-style btn-group buttons-group">
+                <button type="button" class="btn btn-warning disabled btn-sm edit" data-target="#editModal">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+                <button type="button" class="btn btn-success disabled btn-sm check-done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button type="button" class="btn btn-danger disabled btn-sm remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+    `);
+    return $(beforeClass).before(newRow);
+}
+// function to insert a new row at the bottom
+
 function yearAsString(day, month, year) {
     if (day < 10) {
         day = '0' + day;
@@ -63,6 +95,10 @@ $(function () {
         // enable check row button
 
         id += 1;
+
+        if ($(".used").length >= 10) {
+            addRow(".empty-last");
+        }
     });
 });
 
@@ -73,38 +109,22 @@ $(function () {
     // when close btn is pressed remove the text in the input field
 });
 
-
-// $("#exampleModal").on("hidden.bs.modal", function() {
-//     console.log(date);
-//     $("#date-time").val(date[0]);
-// });
-
 $(function () {
     $('.add-new').on('click', function () {
-        // var today = new Date();
-        // var day = today.getDate();
-        // var month = today.getMonth() + 1; //January is 0!
-        // var year = today.getFullYear();
-        // today = yearAsString(day, month, year).usedForDefaultDate;
-        // get today date and parse it in proper format
-        // attach the current date to default date in date pickers
-        // $('#date-time').val(today);
         var today = $('#datetimepicker1').datetimepicker();
     });
 });
 
 $(function(){
-    $(document).on("click", '.check-done', function (e) {
-        // var rowToDelete = $(this);
-        console.log(this);
-        // var inputCheck = $(e.target);
+    $(document).on("click", '.check-done', function () {
         var paragraphToColor = $(this)
         .parent()
-        .siblings(".check").children(".new-task-text-from-value").addClass(".text-success");
-        console.log(this);
-        // var successButton = $(this).find(".check-done");
-        // if ($(successButton).on("click")) {
-        //     paragraphToColor.addClass("text-success");
-        // }         
+        .siblings(".check")
+        .children(".new-task-text-from-value")
+        .addClass("text-muted");
+        
+        var textToDelete = paragraphToColor.text();
+        paragraphToColor.html(`<del>${textToDelete}</del>`);
     });
 });
+// function to change text color when success button is clicked
