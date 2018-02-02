@@ -41,7 +41,7 @@ function yearAsString(day, month, year) {
     }
 
     return {
-        usedForSorting: year + month + day,
+        usedForSorting: `${year}${month}${day}`,
         usedForDefaultDate: day + '/' + month + '/' + year
     }
 }
@@ -66,9 +66,9 @@ $(function () {
             .data("DateTimePicker")
             .date()._d;
         // get current date
-        var currentDay = currentDate.getDate();
-        var currentMonth = (currentDate.getMonth() + 1);
-        var currentYear = currentDate.getFullYear();
+        var currentDay = currentDate.getDate().toString();
+        var currentMonth = (currentDate.getMonth() + 1).toString();
+        var currentYear = currentDate.getFullYear().toString();
         var parsedDate = currentDay + '/' + currentMonth + '/' + currentYear;
         var rowClass = yearAsString(currentDay, currentMonth, currentYear).usedForSorting + taskValue;
 
