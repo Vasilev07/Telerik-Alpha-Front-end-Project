@@ -86,3 +86,18 @@ header .header-add-delete-box button {
     text-align: center;
     font-size: 18px;
 }
+.buttons-group {
+    justify-content: right;
+}
+
+@media (max-width: 767px) {
+    .buttons-group {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .buttons-group {
+        justify-content: center;
+    }
+}
