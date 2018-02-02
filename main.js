@@ -56,8 +56,12 @@ $(function () {
             .removeClass()
             .addClass("btn btn-warning btn-sm edit")
             .attr("data-toggle", "modal");
+        // make active button edit
+        $(".used")
+        .find(".check-done")
+        .removeClass("disabled");
+        // enable check row button
 
-        // make active buttons edit
         id += 1;
     });
 });
@@ -69,15 +73,38 @@ $(function () {
     // when close btn is pressed remove the text in the input field
 });
 
-// $(function () {
-//     $('.add-new').on('click', function () {
-//         var today = new Date();
-//         var day = today.getDate();
-//         var month = today.getMonth() + 1; //January is 0!
-//         var year = today.getFullYear();
-//         today = yearAsString(day, month, year).usedForDefaultDate;
-//         // get today date and parse it in proper format
-//         // attach the current date to default date in date pickers
-//         // $('#date-time').val(today);
-//     });
+
+// $("#exampleModal").on("hidden.bs.modal", function() {
+//     console.log(date);
+//     $("#date-time").val(date[0]);
 // });
+
+$(function () {
+    $('.add-new').on('click', function () {
+        // var today = new Date();
+        // var day = today.getDate();
+        // var month = today.getMonth() + 1; //January is 0!
+        // var year = today.getFullYear();
+        // today = yearAsString(day, month, year).usedForDefaultDate;
+        // get today date and parse it in proper format
+        // attach the current date to default date in date pickers
+        // $('#date-time').val(today);
+        var today = $('#datetimepicker1').datetimepicker();
+    });
+});
+
+$(function(){
+    $(document).on("click", '.check-done', function (e) {
+        // var rowToDelete = $(this);
+        console.log(this);
+        // var inputCheck = $(e.target);
+        var paragraphToColor = $(this)
+        .parent()
+        .siblings(".check").children(".new-task-text-from-value").addClass(".text-success");
+        console.log(this);
+        // var successButton = $(this).find(".check-done");
+        // if ($(successButton).on("click")) {
+        //     paragraphToColor.addClass("text-success");
+        // }         
+    });
+});

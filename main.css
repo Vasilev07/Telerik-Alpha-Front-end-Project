@@ -57,15 +57,17 @@ header .header-add-delete-box button {
     align-items: flex-end;
 }
 
-.check p {
+.check>p {
     margin: 0 0 0px;
 }
 
 .left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-right: 1px solid rgb(245, 169, 169);
+}
+
+.date-style>p {
+    font-weight: 600;
+    margin: 0 0 -10px;
 }
 
 .date-style {
@@ -78,20 +80,3 @@ header .header-add-delete-box button {
     text-align: center;
     font-size: 18px;
 }
-
-.done {
-    /* position: absolute; */
-    position: inherit;
-    background-color: rgb(18, 190, 90);
-    width: 15px;
-    height: 20px;
-    /* margin: 0px; */
-}
-.important {
-    position: inherit;
-    background-color: rgb(211, 28, 28);
-    width: 15px;
-    height: 20px;
-    margin: 5px;
-}
-
