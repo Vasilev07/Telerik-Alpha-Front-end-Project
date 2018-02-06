@@ -37,6 +37,9 @@ $(document).on("click", ".single-delete", function () {
     if ($(".used").length < 9) {
         addRow(".empty-last");        
     }
+    if ($(".check-done").length === $(".used").length) {
+        addRow(".empty-last");        
+    }
     if ($(".selected").length === 0) {
         $(".delete-all").addClass(" disabled ")
     }
