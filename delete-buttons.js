@@ -45,8 +45,12 @@ $(document).on("click", ".single-delete", function () {
 
 $(document).on("click", ".delete-all", function () {
     $(".selected").remove();
-    for (var i = 0; i < 10 - $(".used").length - 1; i += 1) {
-        addRow(".empty-last")
+    var numberOfRowsAfterDelete = $(".check-done").length;
+    for (var i = 0; i < 10 - numberOfRowsAfterDelete; i += 1) {
+        addRow(".empty-last");
+    }
+    if ($(".check-done").length === $(".used").length) {
+        addRow(".empty-last");        
     }
     if ($(".selected").length === 0) {
         $(".delete-all").addClass(" disabled ")
