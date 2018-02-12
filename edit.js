@@ -44,9 +44,9 @@ $(function () {
         var currentDate = $('#datetimepicker1-edit')
             .data("DateTimePicker")
             .date()._d;
-        var currentDay = currentDate.getDate();
-        var currentMonth = (currentDate.getMonth() + 1);
-        var currentYear = currentDate.getFullYear();
+        var currentDay = currentDate.getDate().toString();
+        var currentMonth = (currentDate.getMonth() + 1).toString();
+        var currentYear = currentDate.getFullYear().toString();
         var parsedDate = currentDay + '/' + currentMonth + '/' + currentYear;
         $(sharedState.rowId)
             .parent()
